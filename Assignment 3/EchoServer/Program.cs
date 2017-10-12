@@ -259,6 +259,32 @@ namespace EchoServer
                             return new Response(addStatus(statusCode, statusMessage, ""));
                         }
                     }
+
+                    //If the input method is "update"
+                    if(inputFromJSON.Method == "update")
+                    {
+                        //If there isn't given an index/id 
+                        if(number == -1)
+                        {
+                            string statusCode = "4";
+                            string statusMessage = " Bad Request";
+
+                            return new Response(addStatus(statusCode, statusMessage, ""));
+                        }
+                        
+                        //If the index/id is 0 or less, or if they ask to update an index/id higher than the amount of objects
+                        if(number < 1 || number > listOfCategories.Count)
+                        {
+                            string statusCode = "5";
+                            string statusMessage = " not found";
+
+                            return new Response(addStatus(statusCode, statusMessage, ""));
+
+
+                        }
+
+
+                    }
                 }
                     else
                 {
