@@ -1,0 +1,22 @@
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.deps.json
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.runtimeconfig.json
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.runtimeconfig.dev.json
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.dll
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.csprojResolveAssemblyReference.cache
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.AssemblyInfoInputs.cache
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.AssemblyInfo.cs
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.pdb
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.dll
+C:\Users\lukas\Downloads\RAWDATA2017E_Livecode2-master\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.pdb
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.deps.json
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.runtimeconfig.json
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.runtimeconfig.dev.json
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.dll
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\bin\Debug\netcoreapp2.0\EchoServer.pdb
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.csprojResolveAssemblyReference.cache
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.AssemblyInfoInputs.cache
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.AssemblyInfo.cs
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.dll
+C:\Users\lukas\Desktop\Assignment 3\EchoServer\obj\Debug\netcoreapp2.0\EchoServer.pdb
