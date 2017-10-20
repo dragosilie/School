@@ -12,27 +12,29 @@ namespace EntityMapping
 
             /* This is all the test calls of my functions, just ignore them, or use them as you make yours*/
 
-            //var order = d.GetOrder(10248);
+            var order = d.GetOrder(10248);
 
             //var shippingOrder = d.getOrderFromShippingName("The Big Cheese");
 
             //var orders = d.GetOrders();
 
-            //var orders = d.getOrderDetailsFromOrderId(10248);
+            //var orders = d.GetOrderDetailsByOrderId(10248);
 
-            //var orders = d.getOrderDetailsFromProductId(11);
+            //var orders = d.GetOrderDetailsByProductId(11);
 
-            //var products = d.getProductFromId(1);
+            //var products = d.GetProduct(1);
 
-            //var products = d.getListOfProductsWithSubstring();
+            //var products = d.GetProductByName("ant");
 
-            //var products = d.getProductsByCategoryId(2);
+            //var products = d.GetProductByCategory(1);
+
+            //var categorys = d.GetCategory(-1);
 
             //var categories = d.getCategories();
 
-            //d.addCategory("Test", "Nope");
+            //d.CreateCategory("Test", "Nope");
 
-            //d.deleteCategoryById(13);
+            //d.deleteCategory(13);
 
             //d.updateCategory(12, "Nope", "Nope");
 

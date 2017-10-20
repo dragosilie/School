@@ -21,5 +21,7 @@ namespace EntityMapping
 
         public int UnitsInStock { get; set; }
 
+        public Category Category { get; set; }
+
     }
 }

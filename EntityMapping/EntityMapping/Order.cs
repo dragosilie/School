@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EntityMapping
 {
-    class Order
+    public class Order
     {
 
         [Column("orderid")]
@@ -14,15 +14,17 @@ namespace EntityMapping
         [Column("orderdate")]
         public DateTime Date { get; set; } //Using string as date
 
-        public string Require { get; set; }
+        public DateTime Required { get; set; }
 
-        public string Shipped { get; set; }
+        public DateTime Shipped { get; set; }
 
         public double Freight { get; set; }
 
         public string ShipName { get; set; }
 
         public string ShipCity { get; set; }
+
+        public List<OrderDetails> OrderDetails { get; set; }
 
     }
 }

@@ -29,7 +29,7 @@ namespace EntityMapping
             modelBuilder.Entity<Product>().Property(x => x.Name).HasColumnName("productname");
 
             modelBuilder.Entity<OrderDetails>()
-            .HasKey(o => new { o.OrderID, o.ProductID });
+            .HasKey(o => new { o.OrderId, o.ProductId });
         }
 
 

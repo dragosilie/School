@@ -10,16 +10,20 @@ namespace EntityMapping
     {
 
         [Key, Column("OrderID", Order = 0)]
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
 
         [Key, Column("ProductID", Order = 1)]
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
 
         public double UnitPrice { get; set; }
 
         public int Quantity { get; set; }
 
         public double Discount { get; set; }
+
+        public Product Product { get; set; }
+
+        public Order Order { get; set; }
 
 
     }

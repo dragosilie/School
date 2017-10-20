@@ -7,76 +7,102 @@ namespace EntityMapping
 {
     public class DataService
 
-        /* This is all my functions, feel free to look at them, or just ignore/delete them when you create yours */
+    /* This is all my functions, feel free to look at them, or just ignore/delete them when you create yours */
     {
         //1
-        //I am not sure exactly what the wanted output is, when I look at the tests they just want product name and
-        //category name. So that's what this does.
-        public List<object> GetOrder(int id)
+        //Almost Works
+        public Order GetOrder(int id)
         {
             using (var db = new NordWindContext())
             {
-                var query =
+               var query =
                (from o in db.Orders
-                join od in db.OrderDetails
-                on o.Id equals od.OrderID
-                join pr in db.Products
-                on od.ProductID equals pr.Id
-                join c in db.Categories
-                on pr.CategoryID equals c.Id
-                where o.Id == id
-                select new { ProductName = pr.Name, c.Name });
+               join od in db.OrderDetails
+               on o.Id equals od.OrderId
+               join pr in db.Products
+               on od.ProductId equals pr.Id
+               join c in db.Categories
+               on pr.CategoryID equals c.Id
+               where o.Id == id
+               select new Order
+               {
+                   Id = o.Id,
+                   Date = o.Date,
+                 //  Required = o.Required,
+                 //  Shipped = o.Shipped,
+                   Freight = o.Freight,
+                   ShipName = o.ShipName,
+                   ShipCity = o.ShipCity,
+                   OrderDetails = new List<OrderDetails>
+                   {
+                       new OrderDetails {
+                           UnitPrice = od.UnitPrice,
+                           Quantity = od.Quantity,
+                           Discount = od.Discount,
+                           Product = new Product
+                           {
+                               Name = pr.Name,
+                               Category = new Category
+                               {
+                                   Name = c.Name
+                               }
+                           }
+                       }
+                   }
+               }).ToList();
 
-                foreach (var item in query)
+                for (int i = 0; i < query.Count(); i++)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(query[i].OrderDetails.First().Product.Category.Name);
                 }
 
-                return query.ToList<Object>();
+                return query.First();
             }
-        } 
+        }
 
         //2
-        public List<object> GetOrderFromShippingName(string shipName)
+        //Maybe Works
+        public List<Order> GetOrderFromShippingName(string shipName)
         {
 
             using (var db = new NordWindContext())
             {
                 var query =
-                    (from o in db.Orders
+                    from o in db.Orders
                      where o.ShipName.Equals(shipName)
-                     select new {o.Id, OrderDate = o.Date, o.ShipName, o.ShipCity } 
-                     );
+                     select new Order
+                     {
+                         Id = o.Id,
+                         Date = o.Date,
+                         ShipName = o.ShipName,
+                         ShipCity = o.ShipCity
+                     };
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
-
-                return query.ToList<Object>();
+                return query.ToList();
             }
         }
 
         //3
-        public List<object> GetOrders()
+        //Works
+        public List<Order> GetOrders()
         {
             using (var db = new NordWindContext())
             {
                 var query =
-                    (from o in db.Orders
-                     select new { o.Id, o.ShipName, o.ShipCity }).ToList();
+                    from o in db.Orders
+                    select new Order{
+                         Id = o.Id,
+                         Date = o.Date,
+                         ShipName = o.ShipName,
+                         ShipCity = o.ShipCity };
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
-
-                return query.ToList<Object>();
+                return query.ToList();
             }
         }
 
         //4
-        public List<object> GetOrderDetailsFromOrderId(int id)
+        //Works
+        public List<OrderDetails> GetOrderDetailsByOrderId(int id)
         {
 
             using (var db = new NordWindContext())
@@ -85,22 +111,25 @@ namespace EntityMapping
                 var query =
                     (from od in db.OrderDetails
                      join pr in db.Products
-                     on od.ProductID equals pr.Id
-                     where od.OrderID == id
-                     select new { ProductName = pr.Name, od.UnitPrice, od.Quantity });
+                     on od.ProductId equals pr.Id
+                     where od.OrderId == id
+                     select new OrderDetails {
+                         Product = new Product
+                         {
+                             Name = pr.Name
+                         },
+                         UnitPrice = od.UnitPrice,
+                         Quantity = od.Quantity});
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
-
-                return query.ToList<Object>();
+                return query.ToList();
 
             }
         }
 
+
         //5
-        public List<object> GetOrderDetailsFromProductId(int id)
+        //Works
+        public List<OrderDetails> GetOrderDetailsByProductId(int id)
         {
 
             using (var db = new NordWindContext())
@@ -109,75 +138,86 @@ namespace EntityMapping
                 var query =
                     (from od in db.OrderDetails
                      join o in db.Orders
-                     on od.OrderID equals o.Id
-                     where od.ProductID == id
-                     select new { OrderDate = o.Date, od.UnitPrice, od.Quantity });
+                     on od.OrderId equals o.Id
+                     where od.ProductId == id
+                     select new OrderDetails{
+                         Order = new Order
+                         {
+                             Date = o.Date
+                         },
+                         UnitPrice = od.UnitPrice,
+                         Quantity = od.Quantity});
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
+                Console.WriteLine(query.First().UnitPrice);
 
-                return query.ToList<Object>();
+                return query.ToList();
 
             }
         }
 
+        
+        
+        
+        
         //6
-        //Gives the correct rows, but there is lots of unnecessary rows
-        public List<object> GetProductFromId(int id)
+        //Works
+        public Product GetProduct(int id)
         {
             using (var db = new NordWindContext())
             {
 
                 var query =
-                    (from pr in db.Products
+                    from pr in db.Products
                      join c in db.Categories
                      on pr.CategoryID equals c.Id
-                     join od in db.OrderDetails
-                     on pr.Id equals od.ProductID
                      where pr.Id == id
-                     select new { pr.Name, pr.UnitPrice, pr.QuantityUnit, od.Discount, CategoryName = c.Name });
+                     select new Product
+                     {
+                         Name = pr.Name,
+                         UnitPrice = pr.UnitPrice,
+                         Category = new Category
+                         {
+                             Name = c.Name
+                         }
+                     };
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
+                return query.FirstOrDefault();
 
-                return query.ToList<Object>();
-
-            } 
+            }
 
         }
 
         //7
-        //I cheesed this abit, by asking which products contains an empty space instead of splitting.
-        public List<object> GetListOfProductsWithSubstring()
+        //Works
+        public List<Product> GetProductByName(string sub)
         {
 
-            using(var db = new NordWindContext())
+            using (var db = new NordWindContext())
             {
 
-                var query =
-                    from p in db.Products
+                var query = 
+                    (from p in db.Products
                     join c in db.Categories
                     on p.CategoryID equals c.Id
-                    where p.Name.Contains(' ')
-                    select new { p.Name, CatagoryName = c.Name };
+                    where p.Name.Contains(sub)
+                    select new Product
+                    {
+                        Name = p.Name,
+                        Category = new Category
+                        {
+                            Name = c.Name
+                        }
+                    }).OrderBy(x => x.Name).ToList();
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
-
-                return query.ToList<Object>();
+                return query.ToList<Product>();
 
             }
 
         }
 
         //8
-        public List<object> GetProductsByCategoryId(int id)
+        //Works
+        public List<Product> GetProductByCategory(int id)
         {
 
             using (var db = new NordWindContext())
@@ -188,23 +228,62 @@ namespace EntityMapping
                      join pr in db.Products
                      on c.Id equals pr.CategoryID
                      join od in db.OrderDetails
-                     on pr.Id equals od.ProductID
+                     on pr.Id equals od.ProductId
                      where pr.CategoryID == id
-                     select new { ProductName = pr.Name, c.Name }).Distinct();
-                    //select new { ProductName = pr.Name}).Distinct(); //, pr.UnitPrice, pr.QuantityUnit, od.Discount, c.Name 
+                     select new Product
+                     {
+                         Name = pr.Name,
+                         Category = new Category
+                         {
+                             Name = c.Name
+                         }
+                     }).Distinct();
 
-                foreach (var item in query)
-                {
-                    Console.WriteLine(item);
-                }
+                Console.WriteLine(query.Last().Name);
 
-                return query.ToList<Object>();
+                return query.ToList();
 
             }
 
-        } 
+        }
 
         //9
+        //Works
+        public Category GetCategory(int id)
+        {
+
+            using (var db = new NordWindContext())
+            {
+
+                var query = 
+                    (from c in db.Categories
+                     where c.Id == id
+                     select new Category
+                     {
+                         Id = c.Id,
+                         Name = c.Name,
+                         Description = c.Description
+                     });
+
+                if(query.FirstOrDefault() != null)
+                {
+
+                    Console.WriteLine(query.First());
+                    return query.First();
+                }
+                Console.WriteLine("null");
+                return null;
+
+            }
+        }
+
+
+
+
+
+
+
+        //10
         public List<object> GetCategories()
         {
 
@@ -226,8 +305,8 @@ namespace EntityMapping
 
         }
 
-        //10
-        public void AddCategory(string name, string description)
+        //11
+        public Category CreateCategory(string name, string description)
         {
             using (var db = new NordWindContext())
             {
@@ -243,11 +322,13 @@ namespace EntityMapping
 
                 db.SaveChanges();
 
+                return category;
+
 
             }
         }
 
-        //11
+        //12
         public bool UpdateCategory(int id, string name, string description)
         {
             using (var db = new NordWindContext())
@@ -276,8 +357,8 @@ namespace EntityMapping
 
         }
 
-        //12
-        public bool DeleteCategoryById(int id)
+        //13
+        public bool DeleteCategory(int id)
         {
 
             using (var db = new NordWindContext())
@@ -296,7 +377,7 @@ namespace EntityMapping
                     Console.WriteLine("Sucess!");
                     return true;
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine("Can't delete");
                     return false;
@@ -304,5 +385,9 @@ namespace EntityMapping
             }
 
         }
+
+        
+
+
     }
 }
