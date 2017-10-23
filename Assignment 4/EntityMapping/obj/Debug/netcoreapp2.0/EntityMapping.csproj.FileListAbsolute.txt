@@ -1,0 +1,11 @@
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\bin\Debug\netcoreapp2.0\EntityMapping.deps.json
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\bin\Debug\netcoreapp2.0\EntityMapping.dll
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.csprojResolveAssemblyReference.cache
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.AssemblyInfoInputs.cache
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.AssemblyInfo.cs
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\bin\Debug\netcoreapp2.0\EntityMapping.pdb
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.dll
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\obj\Debug\netcoreapp2.0\EntityMapping.pdb
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\bin\Debug\netcoreapp2.0\EntityMapping.runtimeconfig.json
+C:\Users\lukas\Desktop\EntityMapping\EntityMapping\bin\Debug\netcoreapp2.0\EntityMapping.runtimeconfig.dev.json
