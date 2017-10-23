@@ -12,7 +12,9 @@ namespace EntityMapping
 
             /* This is all the test calls of my functions, just ignore them, or use them as you make yours*/
 
-            //var order = d.GetOrder(10248);
+            var order = d.GetOrder(10248);
+
+            Console.WriteLine(order.OrderDetails.Count());
 
             //var shippingOrder = d.getOrderFromShippingName("The Big Cheese");
 

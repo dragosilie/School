@@ -5624,11 +5624,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\EntityMapping\\TestWebService\\TestWebService.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\Assignment 4\\TestWebService\\TestWebService.csproj",
       "projectName": "TestWebService",
-      "projectPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\TestWebService\\TestWebService.csproj",
+      "projectPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\TestWebService\\TestWebService.csproj",
       "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\TestWebService\\obj\\",
+      "outputPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\TestWebService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

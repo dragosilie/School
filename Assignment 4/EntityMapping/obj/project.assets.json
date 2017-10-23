@@ -6858,11 +6858,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\EntityMapping\\EntityMapping\\EntityMapping.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\Assignment 4\\EntityMapping\\EntityMapping.csproj",
       "projectName": "EntityMapping",
-      "projectPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\EntityMapping\\EntityMapping.csproj",
+      "projectPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\EntityMapping\\EntityMapping.csproj",
       "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\EntityMapping\\obj\\",
+      "outputPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\EntityMapping\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -17,14 +17,14 @@ namespace XUnitTestProject1
             Assert.Null(category.Description);
         }
 
- /*       [Fact]
-        public void GetAllCategories_NoArgument_ReturnsAllCategories()
-        {
-            var service = new EntityMapping.DataService();
-            var categories = service.GetCategories();
-            Assert.Equal(8, categories.Count);
-            Assert.Equal("Beverages", categories.First().Name);
-        } */
+        /*       [Fact]
+               public void GetAllCategories_NoArgument_ReturnsAllCategories()
+               {
+                   var service = new EntityMapping.DataService();
+                   var categories = service.GetCategories();
+                   Assert.Equal(8, categories.Count);
+                   Assert.Equal("Beverages", categories.First().Name); //Can't find Name
+               }  */
 
         [Fact]
         public void GetCategory_ValidId_ReturnsCategoryObject()

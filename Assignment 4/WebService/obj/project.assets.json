@@ -12999,11 +12999,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\EntityMapping\\WebService\\WebService.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\Desktop\\Assignment 4\\WebService\\WebService.csproj",
       "projectName": "WebService",
-      "projectPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\WebService\\WebService.csproj",
+      "projectPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\WebService\\WebService.csproj",
       "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\WebService\\obj\\",
+      "outputPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\WebService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13022,8 +13022,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\lukas\\Desktop\\EntityMapping\\EntityMapping\\EntityMapping.csproj": {
-              "projectPath": "C:\\Users\\lukas\\Desktop\\EntityMapping\\EntityMapping\\EntityMapping.csproj"
+            "C:\\Users\\lukas\\Desktop\\Assignment 4\\EntityMapping\\EntityMapping.csproj": {
+              "projectPath": "C:\\Users\\lukas\\Desktop\\Assignment 4\\EntityMapping\\EntityMapping.csproj"
             }
           }
         }
