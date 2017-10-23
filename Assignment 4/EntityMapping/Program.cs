@@ -36,14 +36,14 @@ namespace EntityMapping
 
             Console.WriteLine(categorys.Name);
 
-            //var categories = d.getCategories();
+            //10  var categories = d.GetCategories();
 
-            //d.CreateCategory("Test", "Nope");
+            //11 d.CreateCategory("Test", "Nope");
 
-            //d.deleteCategory(13);
+            //12 d.UpdateCategory(13, "si aici", "muie steaua");
 
-            //d.updateCategory(12, "Nope", "Nope");
-
+            //13 d.DeleteCategory(15);
+            
             using (var db = new NordWindContext())
             {
                 
